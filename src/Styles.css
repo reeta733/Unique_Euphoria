@@ -1,0 +1,17 @@
+:root {
+  /* Brand palette */
+  --bg: #fdf8f5;
+  --ink: #222222;
+  --muted: #5c5c5c;
+  --brand: #7c5a3a;         /* heading color */
+  --panel: #ffffff;
+  --ring: #e7d5c5;
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+  /* Radii */
+  --r-lg: 1rem;
+  --r-2xl: 1.25rem;
+}

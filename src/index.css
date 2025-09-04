@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* -------------------------------
+   THEME TOKENS
+-------------------------------- */
+@theme {
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-ink: #213547;
+  --color-panel: #f9f9f9;
+  --color-link: #646cff;
+  --color-link-hover: #747bff;
+  --color-button: #1a1a1a;
+
+  /* Fonts */
+  --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  /* Radii */
+  --radius-2xl: 1.25rem;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* -------------------------------
+   BASE STYLES
+-------------------------------- */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    font-family: var(--font-display);
+  }
+
+  a {
+    font-weight: 500;
+    color: var(--color-link);
+    text-decoration: inherit;
+    transition: color 0.25s ease;
+  }
+  a:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+/* -------------------------------
+   UTILITIES
+-------------------------------- */
+@layer utilities {
+  /* Responsive padding container */
+  .container-px {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Reusable card style */
+  .card {
+    background: var(--color-panel);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+  }
+
+  /* Button utility */
+  .btn {
+    background-color: var(--color-button);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.6em 1.2em;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.25s, background-color 0.25s;
+  }
+
+  .btn:hover {
+    border-color: var(--color-link);
+    background-color: #2a2a2a;
+  }
+
+  .btn:focus,
+  .btn:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
