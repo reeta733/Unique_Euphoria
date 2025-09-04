@@ -6,6 +6,8 @@
   --brand: #7c5a3a;         /* heading color */
   --panel: #ffffff;
   --ring: #e7d5c5;
+  
+  --primary: #b48159;
 
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
