@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/Images/Logo.png";
 import { NavLink } from "react-router-dom";
 
+
 const Navbar = () => {
   return (
     <header className="w-full bg-[var(--bg)] shadow-sm">
@@ -13,16 +14,16 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex gap-8 text-[var(--ink)] font-medium">
-          <NavLink to="/" className="hover:text-[var(--primary)] font-semibold">
+          <NavLink to="/" className=" text-[var(--ink)] font-medium">
             Home
           </NavLink>
-          <NavLink to="/about" className="hover:text-[var(--primary)]">
+          <NavLink to="/about" className="">
             About
           </NavLink>
-          <NavLink to="/awards" className="hover:text-[var(--primary)]">
+          <NavLink to="/awards" className="">
             Awards
           </NavLink>
-          <NavLink to="/testimonials" className="hover:text-[var(--primary)]">
+          <NavLink to="/testimonials" className="">
             Testimonials
           </NavLink>
         </nav>

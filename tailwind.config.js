@@ -5,6 +5,9 @@ export default {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
+        mariposa: ["Mariposa Sans Std", "sans-serif"],
+        mariposaAlt: ["Mariposa Sans", "sans-serif"],
+        mariposaClassic: ["Mariposa", "sans-serif"],
         display: ['var(--font-display)', 'serif'],
       },
       boxShadow: {
@@ -13,6 +16,13 @@ export default {
       borderRadius: {
         xl2: "1.25rem",
       }
+      , spacing: {
+        8: "2rem",  // enables `px-8`
+      },
+      screens: {
+        sm: "640px", // enables `sm:`
+      },
+      
     },
   },
   plugins: [],

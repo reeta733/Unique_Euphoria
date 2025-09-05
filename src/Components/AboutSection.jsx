@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const AboutSection = () => {
   return (
-   <></>
+    <section>
+      <h2>About Section</h2>
+    </section>
   )
 }
 

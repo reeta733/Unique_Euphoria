@@ -1,94 +1,113 @@
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const testimonials = [
+const products = [
   {
     id: 1,
-    name: "Samantha R.",
-    text: "I was hesitant to try a new stylist, but this website made it so easy to find the perfect match! The recommendations were spot-on, and I couldn’t be happier with my haircut. The stylist understood exactly what I wanted and even suggested a few enhancements that made my hair look even better. I’ve received so many compliments—I’ll definitely be back.",
-    img: "/testimonials/user1.jpg",
+    name: "Premium Virgin Hair",
+    subtitle: "Long-Lasting Shine",
+    img: "/products/hair1.png", 
   },
   {
     id: 2,
-    name: "Emily W.",
-    text: "Such a wonderful experience! The stylist was attentive and knowledgeable. My hair has never looked this healthy and shiny before. Highly recommend Unique Euphoria to anyone looking for quality extensions.",
-    img: "/testimonials/user2.jpg",
+    name: "Raw Hair Extensions",
+    subtitle: "Long-Lasting Shine",
+    img: "/products/hair2.png",
   },
   {
     id: 3,
-    name: "Jessica K.",
-    text: "Absolutely loved it! Easy ordering, quick delivery, and amazing results. The extensions blended perfectly with my natural hair and gave me the confidence boost I needed.",
-    img: "/testimonials/user3.jpg",
+    name: "Custom Wigs & Closures",
+    subtitle: "Long-Lasting Shine",
+    img: "/products/hair3.png",
+  },
+  {
+    id: 4,
+    name: "Blonde Hair Extensions",
+    subtitle: "Long-Lasting Shine",
+    img: "/products/hair4.png",
   },
 ];
 
-const Testimonials = () => {
+const Products = () => {
   const [index, setIndex] = useState(0);
 
-  const prevTestimonial = () => {
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  const prevSlide = () => {
+    setIndex((old) => (old === 0 ? products.length - 1 : old - 1));
   };
 
-  const nextTestimonial = () => {
-    setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  const nextSlide = () => {
+    setIndex((old) => (old === products.length - 1 ? 0 : old + 1));
   };
-
-  const { name, text, img } = testimonials[index];
 
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-20">
-      {/* Heading */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">Customer Testimonials</h2>
-        <p className="text-gray-400 mt-2">Real Stories from Happy Customers</p>
-      </div>
+    <section className="bg-[var(--ink)] text-white py-16 relative">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* Heading */}
+        <h2 className="text-3xl lg:text-4xl font-bold mb-3 text-white">
+          Explore Our Products
+        </h2>
+        <p className="text-gray-300 mb-8">
+          Discover the Perfect Blend of Quality, Innovation, and Style
+        </p>
 
-      {/* Content */}
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        {/* Left Image */}
-        <div className="w-60 h-60 flex-shrink-0">
-          <img
-            src={img}
-            alt={name}
-            className="w-full h-full object-cover rounded-lg shadow-lg"
-          />
+        {/* Buttons */}
+        <div className="flex justify-between items-center mb-10">
+          <button className="bg-[var(--primary)] text-white px-4 py-1 rounded-full text-sm">
+            New Arrivals
+          </button>
+          <button className="border border-gray-400 px-5 py-1 rounded-full text-sm">
+            See All Product
+          </button>
         </div>
 
-        {/* Right Content */}
-        <div className="flex-1">
-          {/* Stars */}
-          <div className="flex text-amber-500 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <FaStar key={i} />
+        {/* Carousel */}
+        <div className="relative flex items-center justify-center">
+          {/* Left Arrow */}
+          <button
+            onClick={prevSlide}
+            className="absolute -left-6 lg:-left-12 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-100"
+          >
+            <FaArrowLeft />
+          </button>
+
+          <div className="flex gap-6 overflow-hidden">
+            {products.slice(index, index + 3).map((item) => (
+              <div
+                key={item.id}
+                className="bg-white text-black rounded-2xl shadow-md p-4 w-64 flex-shrink-0"
+              >
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="w-full h-56 object-cover rounded-xl"
+                />
+                {/* Tags */}
+                <div className="flex justify-between items-center mt-3">
+                  <span className="bg-black text-white px-4 py-1 rounded-full text-xs">
+                    100%
+                  </span>
+                  <span className="bg-gray-200 text-black px-4 py-1 rounded-full text-xs">
+                    Human Hair
+                  </span>
+                </div>
+                {/* Text */}
+                <h3 className="mt-4 text-lg font-semibold">{item.name}</h3>
+                <p className="text-sm text-gray-600">{item.subtitle}</p>
+              </div>
             ))}
           </div>
 
-          {/* Review */}
-          <p className="text-gray-300 mb-6 leading-relaxed">{text}</p>
-
-          {/* Name */}
-          <p className="font-signature text-lg">{name}</p>
-
-          {/* Navigation */}
-          <div className="flex gap-4 mt-6">
-            <button
-              onClick={prevTestimonial}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700"
-            >
-              <FaChevronLeft />
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-600 hover:bg-amber-700"
-            >
-              <FaChevronRight />
-            </button>
-          </div>
+          {/* Right Arrow */}
+          <button
+            onClick={nextSlide}
+            className="absolute -right-6 lg:-right-12 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-100"
+          >
+            <FaArrowRight />
+          </button>
         </div>
       </div>
     </section>
   );
 };
 
-export default Testimonials;
+export default Products;

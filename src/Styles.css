@@ -6,11 +6,12 @@
   --brand: #7c5a3a;         /* heading color */
   --panel: #ffffff;
   --ring: #e7d5c5;
-  
+   --brand-text: #BE9B81;
+
   --primary: #b48159;
 
   /* Typography */
-  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif, "Mariposa Sans Std", "Mariposa Sans", "Mariposa";
   --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
 
   /* Radii */
