@@ -1,11 +1,5 @@
-/* -------------------------------
-   IMPORTS (must be first)
--------------------------------- */
-
-
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"); */
 @import "./styles.css";
 
 /* -------------------------------
@@ -18,14 +12,20 @@
 /* -------------------------------
    THEME TOKENS
 -------------------------------- */
+/* @font-face {
+  font-family: "Mariposa Sans Std";
+  src: url("./assets/fonts/MariposaSansStd.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+} */
 @theme {
   /* Colors */
-  --color-bg: #E1BEA3;
-  --color-ink: #213547;
-  --color-panel: #f9f9f9;
-  --color-link: #646cff;
-  --color-link-hover: #747bff;
-  --color-button: #1a1a1a;
+  --color-bg: #e4d2c4;
+  --color-ink: #213547; 
+  /* --color-panel: #f9f9f9; */
+  /* --color-link: #646cff; */
+  /* --color-link-hover: #747bff; */
+  /* --color-button: #1a1a1a; */
 
 
   /* Fonts */
@@ -57,6 +57,8 @@
   html,
   body,
   #root {
+  --color-from: #E0AC85;
+  --color-to: #e4d2c4;
     height: 100%;
     margin: 0;
     background: var(--color-bg);
@@ -64,13 +66,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    
+    backdrop-filter: blur(10px);
   }
 
   h1 {
     font-size: 3.2em;
     line-height: 1.1;
-    font-family: var(--font-display);
+    /* font-family: var(--font-display); */
   }
 
   a {
@@ -118,47 +120,7 @@
   }
 }
 
-/* -------------------------------
-   FONTS
--------------------------------- */
-@font-face {
-  font-family: "Mariposa Sans Std";
-  src: url("./assets/fonts/MariposaSansStd.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Mariposa Sans Std";
-  src: url("./assets/fonts/MariposaSansStd-Bold.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Mariposa";
-  src: url("./assets/fonts/Mariposa.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Mariposa";
-  src: url("./assets/fonts/Mariposa-Bold.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Mariposa Sans";
-  src: url("./assets/fonts/MariposaSans.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Mariposa Sans";
-  src: url("./assets/fonts/MariposaSans-Bold.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-}
