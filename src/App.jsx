@@ -8,16 +8,20 @@ import InfoSection from './Components/InfoSection'
 import Testimonial from './Components/Testimonial'
 const App = () => {
   return (
-   <>
-   <Navbar/>
+    <>
+      <div className="relative">
+        <Navbar />
 
-   {/* <AppRoutes/> */}
-   <Hero/>
-   <Products/>
-   <InfoSection/>
-   {/* <Testimonial/> */}
-   {/* <Footer/> */}
-   </>
+        {/* <AppRoutes/> */}
+        <Hero />
+        <Products />
+        <InfoSection />
+        {/* <Testimonial/> */}
+        {/* <Footer/> */}
+      <div className="color-effect absolute" />
+
+      </div>
+    </>
   )
 }
 

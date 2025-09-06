@@ -49,7 +49,7 @@ const Hero = () => {
             <img
               src={Group}
               alt="Luxury Hair"
-              className="rounded-xl w-full object-cover"
+              className="rounded-xl w-full object-contain"
             />
           </div>
         </div>
@@ -97,6 +97,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
+
     </section>
   );
 };
