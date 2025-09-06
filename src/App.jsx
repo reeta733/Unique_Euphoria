@@ -16,8 +16,8 @@ const App = () => {
         <Hero />
         <Products />
         <InfoSection />
-        {/* <Testimonial/> */}
-        {/* <Footer/> */}
+        <Testimonial/>
+        <Footer/>
       <div className="color-effect absolute" />
 
       </div>
