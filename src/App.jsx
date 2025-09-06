@@ -4,7 +4,7 @@ import AppRoutes from './Routes/AppRoutes'
 import Footer from './components/Footer'
 import Hero from './Components/Herosection'
 import Products from './Components/Products'
-// import Experience from './Components/Experience;'
+import InfoSection from './Components/InfoSection'
 import Testimonial from './Components/Testimonial'
 const App = () => {
   return (
@@ -13,8 +13,8 @@ const App = () => {
 
    {/* <AppRoutes/> */}
    <Hero/>
-   {/* <Products/> */}
-   {/* <Experience/> */}
+   <Products/>
+   {/* <InfoSection/> */}
    {/* <Testimonial/> */}
    {/* <Footer/> */}
    </>

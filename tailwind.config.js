@@ -4,11 +4,18 @@ export default {
   theme: {
     extend: {
       // fontFamily: {
-      //   sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
+      //   // ✅ EASY FONT SYSTEM
+      //   sans: ['system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
       //   mariposa: ["Mariposa Sans Std", "sans-serif"],
-      //   mariposaAlt: ["Mariposa Sans", "sans-serif"],
-      //   mariposaClassic: ["Mariposa", "sans-serif"],
-      //   display: ['var(--font-display)', 'serif'],
+      //   inter: ["Inter", "sans-serif"],
+      //   cormorant: ["Cormorant Garamond", "serif"],
+      //   display: ["Playfair Display", 'serif'],
+        
+      //   // ✅ ELEMENT-SPECIFIC (use CSS variables)
+      //   heading: ['var(--font-heading)'],
+      //   body: ['var(--font-body)'],
+      //   button: ['var(--font-button)'],
+      //   nav: ['var(--font-nav)'],
       // },
       boxShadow: {
         card: "0 8px 24px rgba(0,0,0,.08)",

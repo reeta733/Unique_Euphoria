@@ -1,5 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
 @import "./styles.css";
 
 /* -------------------------------
@@ -12,25 +12,35 @@
 /* -------------------------------
    THEME TOKENS
 -------------------------------- */
-/* @font-face {
+@font-face {
   font-family: "Mariposa Sans Std";
   src: url("./assets/fonts/MariposaSansStd.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-} */
+}
+
 @theme {
   /* Colors */
   --color-bg: #e4d2c4;
-  --color-ink: #213547; 
+  --color-ink: #213547;
   /* --color-panel: #f9f9f9; */
   /* --color-link: #646cff; */
   /* --color-link-hover: #747bff; */
   /* --color-button: #1a1a1a; */
 
 
-  /* Fonts */
+ 
   --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-display: "Playfair Display", serif;
+  --font-mariposa: "Mariposa Sans Std", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  
+
+  --font-heading: var(--font-mariposa);     /* h1, h2, h3, h4, h5, h6 */
+  --font-body: var(--font-mariposa);        /* p, span, div text */
+  --font-button: var(--font-sans);          /* buttons */
+  --font-nav: var(--font-sans);             /* navigation */
 
   /* Radii */
   --radius-2xl: 1.25rem;
@@ -39,9 +49,12 @@
   --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.07);
 
   /* ✅ Spacing scale */
-  --spacing-5: 1.25rem; /* px-5 */
-  --spacing-8: 2rem;    /* px-8 */
-  --spacing-12: 3rem;   /* px-12 */
+  --spacing-5: 1.25rem;
+  /* px-5 */
+  --spacing-8: 2rem;
+  /* px-8 */
+  --spacing-12: 3rem;
+  /* px-12 */
 
   /* ✅ Breakpoints */
   --breakpoint-sm: 640px;
@@ -57,8 +70,8 @@
   html,
   body,
   #root {
-  --color-from: #E0AC85;
-  --color-to: #e4d2c4;
+    --color-from: #E0AC85;
+    --color-to: #e4d2c4;
     height: 100%;
     margin: 0;
     background: var(--color-bg);
@@ -69,10 +82,33 @@
     backdrop-filter: blur(10px);
   }
 
+  /* ✅ HEADING FONTS - Easy to change */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading) !important;
+  }
+
   h1 {
     font-size: 3.2em;
     line-height: 1.1;
-    /* font-family: var(--font-display); */
+  }
+
+  /* ✅ BODY TEXT FONTS - Easy to change */
+  p, 
+  p *,
+  span,
+  div {
+    font-family: var(--font-body) !important;
+  }
+
+  /* ✅ BUTTON FONTS */
+  button {
+    font-family: var(--font-button) !important;
+  }
+
+  /* ✅ NAVIGATION FONTS */
+  nav,
+  nav * {
+    font-family: var(--font-nav) !important;
   }
 
   a {
@@ -118,9 +154,60 @@
   .btn:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
+
+  /* ✅ UTILITY FONT CLASSES - Use these in your components */
+  .font-mariposa {
+    font-family: var(--font-mariposa) !important;
+  }
+  
+  .font-inter {
+    font-family: var(--font-inter) !important;
+  }
+  
+  .font-cormorant {
+    font-family: var(--font-cormorant) !important;
+  }
+  
+  .font-sans-custom {
+    font-family: var(--font-sans) !important;
+  }
+  
+  .font-display-custom {
+    font-family: var(--font-display) !important;
+  }
 }
 
+/* ✅ OVERRIDE SYSTEM - Forces fonts to apply */
+p,
+p.text-xs,
+p.text-sm,
+p.text-base,
+p.text-lg,
+.text-xs,
+.text-sm,
+.text-base,
+.text-lg {
+  font-family: var(--font-body) !important;
+}
 
+/* More specific targeting */
+section p,
+div p,
+* p {
+  font-family: var(--font-body) !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+}
+button, button * {
+  font-family: var(--font-button) !important;
+}
+nav, nav * {
+  font-family: var(--font-nav) !important;
+}
 
-
-
+img{
+  width: 100% ;
+  max-height: 400px;
+  object-fit: cover;
+}

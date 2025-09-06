@@ -6,25 +6,49 @@ const products = [
     id: 1,
     name: "Premium Virgin Hair",
     subtitle: "Long-Lasting Shine",
-    img: "/products/hair1.png", 
+    img: "../../src/assets/Images/Hair7.jpg",
   },
   {
     id: 2,
     name: "Raw Hair Extensions",
     subtitle: "Long-Lasting Shine",
-    img: "/products/hair2.png",
+    img: "../../src/assets/Images/Hair6.jpg",
   },
   {
     id: 3,
     name: "Custom Wigs & Closures",
     subtitle: "Long-Lasting Shine",
-    img: "/products/hair3.png",
+    img: "../../src/assets/Images/Hair8.jpg",
   },
   {
     id: 4,
     name: "Blonde Hair Extensions",
     subtitle: "Long-Lasting Shine",
-    img: "/products/hair4.png",
+    img: "../../src/assets/Images/Hair4.jpg",
+  },
+    {
+    id: 4,
+    name: "Blonde Hair Extensions",
+    subtitle: "Long-Lasting Shine",
+    img: "../../src/assets/Images/Hair4.jpg",
+  },
+    {
+    id: 4,
+    name: "Blonde Hair Extensions",
+    subtitle: "Long-Lasting Shine",
+    img: "../../src/assets/Images/Hair4.jpg",
+  },
+    {
+    id: 4,
+    name: "Blonde Hair Extensions",
+    subtitle: "Long-Lasting Shine",
+    img: "../../src/assets/Images/Hair4.jpg",
+  },
+    {
+    id: 4,
+    name: "Blonde Hair Extensions",
+    subtitle: "Long-Lasting Shine",
+    img: "../../src/assets/Images/Hair4.jpg",
   },
 ];
 
@@ -43,7 +67,7 @@ const Products = () => {
     <section className="bg-[var(--ink)] text-white py-16 relative">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
-        <h2 className="text-3xl lg:text-4xl font-bold mb-3 text-white">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-3 text-white font-mariposa">
           Explore Our Products
         </h2>
         <p className="text-gray-300 mb-8">
@@ -70,29 +94,43 @@ const Products = () => {
             <FaArrowLeft />
           </button>
 
+          {/* Cards */}
           <div className="flex gap-6 overflow-hidden">
             {products.slice(index, index + 3).map((item) => (
               <div
                 key={item.id}
-                className="bg-white text-black rounded-2xl shadow-md p-4 w-64 flex-shrink-0"
+                className="flex flex-col items-center w-72 flex-shrink-0"
               >
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full h-56 object-cover rounded-xl"
-                />
-                {/* Tags */}
-                <div className="flex justify-between items-center mt-3">
-                  <span className="bg-black text-white px-4 py-1 rounded-full text-xs">
-                    100%
-                  </span>
-                  <span className="bg-gray-200 text-black px-4 py-1 rounded-full text-xs">
-                    Human Hair
-                  </span>
+                {/* Card with image */}
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden w-full relative">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-80 object-cover"
+                  />
+
+                  {/* Single pill center */}
+                  <div className="absolute inset-0 flex justify-center items-end m-4">
+                    <div className="bg-white rounded-full flex items-center shadow px-2 py-1">
+                      <span className="bg-black text-white text-xs sm:text-sm px-3 py-1 rounded-l-full">
+                        100%
+                      </span>
+                      <span className="text-black text-xs sm:text-sm px-3 py-1 rounded-r-full">
+                        Human Hair
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                {/* Text */}
-                <h3 className="mt-4 text-lg font-semibold">{item.name}</h3>
-                <p className="text-sm text-gray-600">{item.subtitle}</p>
+
+                {/* Text outside card */}
+                <div className="mt-4 text-center">
+                  <h3 className="text-lg font-semibold text-white">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm text-gray-300 font-medium">
+                    {item.subtitle}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

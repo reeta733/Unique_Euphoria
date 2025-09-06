@@ -9,9 +9,7 @@
    --brand-text: #BE9B81;
   --primary: #b48159;
 
-  /* Typography */
-  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif, "Mariposa Sans Std", "Mariposa Sans", "Mariposa"; 
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif,;
+ 
 
   /* Radii */
   --r-lg: 1rem;
