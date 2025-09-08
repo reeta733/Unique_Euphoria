@@ -3,33 +3,25 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      // fontFamily: {
-      //   // ✅ EASY FONT SYSTEM
-      //   sans: ['system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-      //   mariposa: ["Mariposa Sans Std", "sans-serif"],
-      //   inter: ["Inter", "sans-serif"],
-      //   cormorant: ["Cormorant Garamond", "serif"],
-      //   display: ["Playfair Display", 'serif'],
-        
-      //   // ✅ ELEMENT-SPECIFIC (use CSS variables)
-      //   heading: ['var(--font-heading)'],
-      //   body: ['var(--font-body)'],
-      //   button: ['var(--font-button)'],
-      //   nav: ['var(--font-nav)'],
-      // },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        cormorant: ["Cormorant Garamond", "serif"],
+        playfair: ["Playfair Display", "serif"],
+        mariposa: ["Mariposa Sans Std", "sans-serif"], 
+      },
       boxShadow: {
         card: "0 8px 24px rgba(0,0,0,.08)",
       },
       borderRadius: {
         xl2: "1.25rem",
-      }
-      , spacing: {
-        8: "2rem",  // enables `px-8`
+      },
+      spacing: {
+        8: "2rem",
       },
       screens: {
-        sm: "640px", // enables `sm:`
+        sm: "640px",
+        lg: "1024px",
       },
-      
     },
   },
   plugins: [],

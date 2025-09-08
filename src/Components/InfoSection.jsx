@@ -2,8 +2,8 @@ import React from "react";
 
 const InfoSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-12 py-0 gap-8 bg-white">
-      <div className="flex items-center justify-center px-8 py-12 ">
+    <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-12  bg-white">
+      <div className="flex items-center justify-center px-8  ">
         <div className="w-1/2 flex justify-center items-start pt-0">
           <img
             src="../../src/assets/Images/Hair4.jpg"
@@ -26,7 +26,7 @@ const InfoSection = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-center px-8 py-12">
+      <div className="flex items-center justify-center px-8 ">
         <div className="w-1/2 pr-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Choose Your <br /> Perfect Hair
@@ -43,13 +43,13 @@ const InfoSection = () => {
 
         <div className="w-1/2 flex justify-center">
           <img
-            src="../../src/assets/Images/Hair9.jpg"
+            src="../../src/assets/Images/hair5.jpg"
             alt="Hair Collection"
-            className=" w-full h-[500px]  object-cover  shadow-md"
+            className=" w-full h-[500px] object-cover  shadow-md"
           />
         </div>
       </div>
-      <div className="flex items-center justify-center px-8 py-12">
+      <div className="flex items-center justify-center px-8 ">
         <div className="w-1/2 flex justify-center">
           <img
             src="../../src/assets/Images/Hair2.jpg"

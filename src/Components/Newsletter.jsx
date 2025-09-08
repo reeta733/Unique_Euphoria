@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 import Hair1 from "../../src/assets/Images/Hair1.jpg";
 import Hair2 from "../../src/assets/Images/Hair2.jpg";
 import Hair3 from "../../src/assets/Images/Hair3.jpg";
@@ -44,7 +44,7 @@ const Blogs = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
             >
               <img
                 src={blog.image}
@@ -64,7 +64,7 @@ const Blogs = () => {
         {/* View More Button */}
         <div className="mt-10">
           <button className="flex items-center gap-2 bg-[#b77e5e] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#9c6644] transition-all duration-300 mx-auto">
-            View More <FaArrowRight />
+            View More <IoIosArrowForward />
           </button>
         </div>
       </div>

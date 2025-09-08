@@ -27,24 +27,21 @@ const Hero = () => {
 
   return (
     <section className="relative py-12 lg:py-20 overflow-hidden blur-layer px-4 sm:px-6 lg:px-12 ">
-      {/* Grid Layout */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left Text */}
+      <div className="max-w-7xl   mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="text-left space-y-6">
-          <p className="text-xs sm:text-sm uppercase tracking-wide text-gray-700 font-medium font-mariposa">
+          <p className="text-xs sm:text-sm uppercase tracking-wide text-gray-700 font-medium ">
             Luxurious, Confident, and Empowering
           </p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#6B4226] leading-tight ">
             Luxury Hair, <br /> Timeless Beauty
           </h1>
-          <p className="text-base sm:text-lg text-gray-700 max-w-md font-medium font-mariposa">
+          <p className="text-base sm:text-lg text-gray-700 max-w-md font-medium ">
             Premium quality hair for every woman, every style, and every
             occasion.
           </p>
         </div>
 
-        {/* Right Image Section */}
-        <div className="relative flex justify-center">
+        {/* <div className="flex justify-center lg:justify-end">
           <div className="relative z-10 rounded-2xl overflow-hidden p-2 w-[240px] sm:w-[280px] lg:w-[360px] ">
             <img
               src={Group}
@@ -52,11 +49,10 @@ const Hero = () => {
               className="rounded-xl w-full object-contain"
             />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative mt-12 sm:mt-16  flex justify-center ">
-        {/* Category Cards */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 montserrat ">
           {categories.map((item, idx) => (
             <div
@@ -78,9 +74,7 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* Overlay Arrows */}
         <div className="absolute flex flex-wrap justify-start left-0 top-1/2 right-1/2-translate-y-1/2 flex flex-row gap-4">
-          {/* Left Button */}
           <button
             onClick={prevSlide}
             className="w-12 h-12 flex items-center justify-center bg-white text-gray-800 rounded-full shadow-md border hover:bg-[#E0AC85] hover:text-white transition ml-10"
@@ -88,7 +82,6 @@ const Hero = () => {
             <IoIosArrowRoundBack className="text-2xl" />
           </button>
 
-          {/* Right Button */}
           <button
             onClick={nextSlide}
             className="w-12 h-12 flex items-center justify-center bg-white text-gray-800 rounded-full shadow-md border hover:bg-[#E0AC85] hover:text-white transition "
@@ -97,7 +90,6 @@ const Hero = () => {
           </button>
         </div>
       </div>
-
     </section>
   );
 };

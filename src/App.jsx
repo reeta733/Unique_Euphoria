@@ -1,11 +1,15 @@
 import React from 'react'
 import Navbar from './Components/NavBar'
 import AppRoutes from './Routes/AppRoutes'
-import Footer from './components/Footer'
+
 import Hero from './Components/Herosection'
 import Products from './Components/Products'
 import InfoSection from './Components/InfoSection'
 import Testimonial from './Components/Testimonial'
+import Footer from './Components/Footer'
+import Newsletter from './Components/Newsletter'
+import TestimonialCard from './Components/TestimonialCard'
+import Appointment from './Components/Appointment'
 const App = () => {
   return (
     <>
@@ -16,8 +20,12 @@ const App = () => {
         <Hero />
         <Products />
         <InfoSection />
-        <Testimonial/>
-        <Footer/>
+        <TestimonialCard />
+        <Testimonial />
+        <Newsletter />
+        <Appointment />
+        <Footer />
+
       <div className="color-effect absolute" />
 
       </div>
