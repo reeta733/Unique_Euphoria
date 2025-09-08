@@ -16,17 +16,16 @@ const App = () => {
       <div className="relative">
         <Navbar />
 
-        {/* <AppRoutes/> */}
-        <Hero />
-        <Products />
-        <InfoSection />
-        <TestimonialCard />
-        <Testimonial />
-        <Newsletter />
-        <Appointment />
-        <Footer />
+        <AppRoutes/>
+        {/* <Hero /> */}
+        {/* <Products /> */}
+        {/* <InfoSection /> */}
+        {/* <TestimonialCard /> */}
+        {/* <Testimonial /> */}
+        {/* <Newsletter /> */}
+        {/* <Appointment /> */}
+        {/* <Footer /> */}
 
-      <div className="color-effect absolute" />
 
       </div>
     </>

@@ -26,8 +26,8 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative py-12 lg:py-20 overflow-hidden blur-layer px-4 sm:px-6 lg:px-12 ">
-      <div className="max-w-7xl   mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="relative  lg:py-20 overflow-hidden blur-layer px-4 sm:px-6 lg:px-12 ">
+      <div className="max-w-7xl   mx-auto grid grid-cols-2 lg:grid-cols-2 gap-12 items-center">
         <div className="text-left space-y-6">
           <p className="text-xs sm:text-sm uppercase tracking-wide text-gray-700 font-medium ">
             Luxurious, Confident, and Empowering
@@ -41,15 +41,15 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* <div className="flex justify-center lg:justify-end">
-          <div className="relative z-10 rounded-2xl overflow-hidden p-2 w-[240px] sm:w-[280px] lg:w-[360px] ">
+        <div className="grid-cols- mt-6 lg:mt-0">
+          <div className=" sm:w-[280px] lg:w-[360px] ">
             <img
               src={Group}
               alt="Luxury Hair"
               className="rounded-xl w-full object-contain"
             />
           </div>
-        </div> */}
+        </div>
       </div>
 
       <div className="relative mt-12 sm:mt-16  flex justify-center ">

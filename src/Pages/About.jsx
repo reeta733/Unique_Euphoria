@@ -1,35 +1,60 @@
 import React from "react";
-
+import { FaRegThumbsUp } from "react-icons/fa";
 import Icon from "../Components/Icon";
 
 const About = () => {
   return (
-    <header className="container bg-white mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
+    <header className="container  mx-auto grid h-full gap-10 w-full grid-cols-1 items-center lg:grid-cols-2">
       <div className="flex items-center justify-center px-8  ">
         <div className="w-1/2 pl-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Choose Your <br /> Perfect Hair
+            About Unique Euphoria
           </h2>
           <p className="text-gray-600 mb-6 text-justify text-wrap">
-            Find the perfect match from our premium collection of 100% Raw hair.
-            Whether you're looking for volume, length, or a complete
-            transformation, we have it all.
+            At Unique Euphoria, we redefine beauty with luxury hair solutions
+            designed for confidence and elegance. Our brand is built on the
+            foundation of quality, innovation, and self-expression, offering
+            premium hair products that empower individuals to embrace their
+            unique beauty. From ethically sourced hair extensions to expertly
+            crafted wigs, every product is designed to deliver unmatched
+            quality, versatility, and a natural look. We are more than just a
+            beauty brand—we are a movement that celebrates diversity,
+            confidence, and the art of transformation. With a commitment to
+            excellence and customer satisfaction, Unique Euphoria continues to
+            inspire and elevate beauty standards, making luxury hair accessible
+            to all.
           </p>
         </div>
-        <div className="w-1/2 flex justify-center items-start pt-0">
-          <img
-            src="../../src/assets/Images/Hair4.jpg"
-            alt="Hair Collection"
-            className=" w-full h-[500px]  object-cover  shadow-md"
-          />
+        <div className="w-1/2 flex justify-center items-start pt-6 ">
+          <div className=" grid grid-cols-12 mt-6 lg:mt-0 gap-4">
+            <div className="grid col-span-4 mt-6 lg:mt-0 gap-4">
+              <img
+                src="../../src/assets/Images/model13.png"
+                alt="Hair Collection"
+                className=" w-full h-[240px] rounded-lg object-cover col-span-4 gap-4"
+              />
+              <div className=" justify-center w-[240px] max-w-sm mx-auto bg-black  rounded-2xl shadow-md p-6 flex items-center justify-center text-center">
+                <h1 className="text-white text-lg font-medium">15 +
+                  <p className="text-gray-300 mt-2">Years of Experience</p>
+                </h1>
+                
+              </div>
+            </div>
+
+            <img
+              src="../../src/assets/Images/model13.png"
+              alt="Hair Collection"
+              className=" w-full  object-cover h-[500px] rounded-lg col-span-4 gap-4"
+            />
+          </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-12  bg-white">
+      <div className="flex  flex-col md:flex-row items-start justify-center px-6 md:px-12  bg-white">
         <div className="flex items-center justify-center px-8  ">
           <div className="w-1/2 flex justify-center items-start pt-0">
             <img
               src="../../src/assets/Images/logo1.jpg"
-              alt="Hair Collection"
+              alt="logo"
               className=" w-full h-[500px]  object-cover  shadow-md"
             />
           </div>
@@ -60,7 +85,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="w-1/2 flex justify-center">
+          <div className="w-1/2 flex justify-center ">
             <img
               src="../../src/assets/Images/hair1.jpg"
               alt="Hair Collection"
@@ -92,7 +117,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Icon />
+      <Icon/>
     </header>
   );
 };
