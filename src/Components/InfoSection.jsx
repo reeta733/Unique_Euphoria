@@ -13,7 +13,7 @@ const InfoSection = () => {
         </div>
 
         <div className="w-1/2 pl-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif ">
             Choose Your <br /> Perfect Hair
           </h2>
           <p className="text-gray-600 mb-6 text-justify text-wrap">
@@ -21,14 +21,14 @@ const InfoSection = () => {
             Whether you're looking for volume, length, or a complete
             transformation, we have it all.
           </p>
-          <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full ">
+          <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
             View Collection
           </button>
         </div>
       </div>
       <div className="flex items-center justify-center px-8 ">
         <div className="w-1/2 pr-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif ">
             Choose Your <br /> Perfect Hair
           </h2>
           <p className="text-gray-600 mb-6">
@@ -36,7 +36,7 @@ const InfoSection = () => {
             Whether you're looking for volume, length, or a complete
             transformation, we have it all.
           </p>
-          <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full ">
+        <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
             View Collection
           </button>
         </div>
@@ -59,7 +59,7 @@ const InfoSection = () => {
         </div>
 
         <div className="w-1/2 pl-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
             Choose Your <br /> Perfect Hair
           </h2>
           <p className="text-gray-600 mb-6 text-balance ">
@@ -67,7 +67,7 @@ const InfoSection = () => {
             Whether you're looking for volume, length, or a complete
             transformation, we have it all.
           </p>
-          <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full ">
+         <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
             View Collection
           </button>
         </div>

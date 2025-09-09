@@ -1,12 +1,16 @@
 import React from "react";
-import { FaRegThumbsUp } from "react-icons/fa";
 import Icon from "../Components/Icon";
+import model11 from "../assets/Images/model11.png";
+import model13 from "../assets/Images/model13.png";
+import model14 from "../assets/Images/model14.png";
+import hair1 from "../assets/Images/Hair1.jpg";
+import hair5 from "../assets/Images/Hair5.jpg";
 
 const About = () => {
   return (
-    <header className="container  mx-auto grid h-full gap-10 w-full grid-cols-1 items-center lg:grid-cols-2">
-      <div className="flex items-center justify-center px-8  ">
-        <div className="w-1/2 pl-12">
+    <header className="container  mx-auto grid h-full gap-10  grid-cols-1 items-center lg:grid-cols-2">
+      <div className="flex items-center  justify-center px-8  ">
+        <div className="w-1/2 pl-12 ">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             About Unique Euphoria
           </h2>
@@ -25,27 +29,24 @@ const About = () => {
             to all.
           </p>
         </div>
-        <div className="w-1/2 flex justify-center items-start pt-6 ">
-          <div className=" grid grid-cols-12 mt-6 lg:mt-0 gap-4">
-            <div className="grid col-span-4 mt-6 lg:mt-0 gap-4">
-              <img
-                src="../../src/assets/Images/model13.png"
+        <div className="w-1/2 grid grid-cols-2  pt-6 gap-4">
+        <img
+                src={model14}
                 alt="Hair Collection"
-                className=" w-full h-[240px] rounded-lg object-cover col-span-4 gap-4"
+                className="  rounded-lg object-cover  gap-4"
               />
-              <div className=" justify-center w-[240px] max-w-sm mx-auto bg-black  rounded-2xl shadow-md p-6 flex items-center justify-center text-center">
-                <h1 className="text-white text-lg font-medium">15 +
-                  <p className="text-gray-300 mt-2">Years of Experience</p>
-                </h1>
                 
-              </div>
-            </div>
+           
 
-            <img
-              src="../../src/assets/Images/model13.png"
-              alt="Hair Collection"
-              className=" w-full  object-cover h-[500px] rounded-lg col-span-4 gap-4"
-            />
+          <div className=" flex flex-row mt-6 lg:mt-0 gap-4">
+            <div className=" mt-6 lg:mt-0 gap-4 ">
+              
+              <img
+                src={model13}
+                alt="Hair Collection"
+                className="  object-cover  rounded-lg  gap-4"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -53,9 +54,9 @@ const About = () => {
         <div className="flex items-center justify-center px-8  ">
           <div className="w-1/2 flex justify-center items-start pt-0">
             <img
-              src="../../src/assets/Images/logo1.jpg"
+              src={model11}
               alt="logo"
-              className=" w-full h-[500px]  object-cover  shadow-md"
+              className=" bg-black"
             />
           </div>
 
@@ -87,7 +88,7 @@ const About = () => {
 
           <div className="w-1/2 flex justify-center ">
             <img
-              src="../../src/assets/Images/hair1.jpg"
+              src={hair1}
               alt="Hair Collection"
               className=" w-full h-[500px] object-cover  shadow-md"
             />
@@ -96,7 +97,7 @@ const About = () => {
         <div className="flex items-center justify-center px-8 ">
           <div className="w-1/2 flex justify-center">
             <img
-              src="../../src/assets/Images/Hair5.jpg"
+              src={hair5}
               alt="Hair Collection"
               className=" w-full h-[500px]  object-cover shadow-md"
             />
@@ -117,7 +118,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Icon/>
+      <Icon />
     </header>
   );
 };

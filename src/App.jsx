@@ -13,18 +13,19 @@ import Appointment from './Components/Appointment'
 const App = () => {
   return (
     <>
-      <div className="relative">
+      <div className="">
         <Navbar />
 
-        <AppRoutes/>
-        {/* <Hero /> */}
-        {/* <Products /> */}
-        {/* <InfoSection /> */}
-        {/* <TestimonialCard /> */}
-        {/* <Testimonial /> */}
-        {/* <Newsletter /> */}
+        {/* <AppRoutes/> */}
+        <Hero />
+        <Products />
+        <InfoSection />
+        <TestimonialCard />
+        <Testimonial />
+        <Newsletter />
         {/* <Appointment /> */}
-        {/* <Footer /> */}
+        <Footer />
+
 
 
       </div>

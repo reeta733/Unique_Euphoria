@@ -25,7 +25,7 @@ export default function Footer() {
         />
         <button
           type="submit"
-          className="px-6 py-2 bg-[var(--primary)] text-white rounded-full text-sm font-medium"
+          className=" m-2 p-2 pl-2 pr-2 bg-[var(--primary)] text-white cursor-pointer rounded-full text-sm font-medium"
         >
           Subscribe
         </button>

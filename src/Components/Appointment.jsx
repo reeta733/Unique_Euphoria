@@ -1,32 +1,24 @@
 import React from "react";
-// import model5 from '../../src/assets/Images/model5.jpg'
-
+import model5 from "../assets/Images/model5.png";
 const Appointment = () => {
   return (
-
-    
-     <div
-    //   style={{ backgroundImage: `url(${model5})` }} 
-      className="bg-no-repeat bg-none bg-cover bg-center  grid grid-cols-2 relative w-full  md:h-[500px] "
-    >
-        <div className="absolute inset-y-0 right-64 w-full md:w-1/2 ">
-          <div className="absolute  inset-y-0 right-0  md:w-1/2 p-8 md:p-12 flex flex-col justify-center ">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight font-serif text-right">
-              Have Any Questions? <br />
-              Get Free Consultation
-            </h2>
-            <p className="text-lg mb-8 font-medium  ">
-              Expert Advice Just a Click Away!
+  <section
+          className="w-full h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+          style={{ backgroundImage: `url(${model5})` }}
+        >
+         
+          <div className="absolute inset-0  bg-opacity-40"></div>
+  
+          {/* Content */}
+          <div className="relative z-10 text-center">
+            <h1 className="text-white text-4xl md:text-6xl font-playfair font-bold mb-4">
+              Client Testimonials
+            </h1>
+            <p className="text-white text-lg md:text-xl max-w-2xl mx-auto px-4">
+              Hear what our satisfied clients have to say about their experience
             </p>
-            <button className=" bg-black hover:text-[#E0AC85] text-white px-6 py-3 rounded-full ">
-              Get Appointment
-            </button>
           </div>
-        </div>
-
-      
-      </div>
-
+        </section>
   );
 };
 
