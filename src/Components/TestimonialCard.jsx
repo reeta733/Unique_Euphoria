@@ -11,6 +11,26 @@ import model12 from "../../src/assets/Images/model12.png";
 import model6 from "../../src/assets/Images/model6.png";
 import model4 from "../../src/assets/Images/model4.png";
 
+// Custom PrevArrow component
+const PrevArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white text-gray-800 rounded-full shadow-md border hover:bg-[#E0AC85] hover:text-white transition z-10 cursor-pointer"
+  >
+    <IoIosArrowRoundBack className="text-2xl" />
+  </button>
+);
+
+// Custom NextArrow component
+const NextArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white text-gray-800 rounded-full shadow-md border hover:bg-[#E0AC85] hover:text-white transition z-10 cursor-pointer"
+  >
+    <IoIosArrowRoundForward className="text-2xl" />
+  </button>
+);
+
 const TestimonialCard = () => {
   const testimonials = [
     { img: model7 },
@@ -18,24 +38,6 @@ const TestimonialCard = () => {
     { img: model12 },
     { img: model6 },
   ];
-
-  const PrevArrow = ({ onClick }) => (
-    <button
-      onClick={onClick}
-      className="w-10 h-10 flex items-center justify-center bg-white text-gray-800 rounded-full shadow-md border hover:bg-[#E0AC85] hover:text-white transition z-10 cursor-pointer"
-    >
-      <IoIosArrowRoundBack className="text-2xl" />
-    </button>
-  );
-
-  const NextArrow = ({ onClick }) => (
-    <button
-      onClick={onClick}
-      className="w-10 h-10 flex items-center justify-center bg-white text-gray-800 rounded-full shadow-md border hover:bg-[#E0AC85] hover:text-white transition z-10 cursor-pointer"
-    >
-      <IoIosArrowRoundForward className="text-2xl" />
-    </button>
-  );
 
   const settings = {
     dots: false,
@@ -63,7 +65,7 @@ const TestimonialCard = () => {
           </p>
 
           <div className="relative">
-            <Slider {...settings} className="flex gap-6">
+            <Slider {...settings}>
               {testimonials.map((item, index) => (
                 <div key={index} className="relative px-3">
                   <img
@@ -98,7 +100,6 @@ const TestimonialCard = () => {
                 className="w-full h-[500px] object-cover shadow-md"
               />
             </div>
-
             <div className="w-1/2 pl-12">
               <h1 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
                 Love And Care
@@ -112,8 +113,8 @@ const TestimonialCard = () => {
                 at a time.
               </p>
               <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
-  View Collection
-</button>
+                View Collection
+              </button>
             </div>
           </div>
         </div>

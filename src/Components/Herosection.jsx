@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,32 +19,15 @@ const Hero = () => {
     { name: "New Arrivals", img: Hair3 },
   ];
 
-  const PrevArrow = ({ onClick }) => (
-    <button
-      onClick={onClick}
-      className="absolute -left-6 lg:-left-12 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 z-10 cursor-pointer"
-    >
-      <IoIosArrowRoundBack className="text-2xl" />
-    </button>
-  );
-
-  const NextArrow = ({ onClick }) => (
-    <button
-      onClick={onClick}
-      className="absolute -right-6 lg:-right-12 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 z-10 cursor-pointer"
-    >
-      <IoIosArrowRoundForward className="text-2xl" />
-    </button>
-  );
+  const sliderRef = useRef(null);
 
   const settings = {
     dots: false,
+    arrows: false,
     infinite: true,
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -58,7 +42,6 @@ const Hero = () => {
 
   return (
     <section className="relative lg:py-16 px-4 sm:px-6 lg:px-12">
-      
       <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 text-left">
           <p className="text-xs sm:text-sm uppercase tracking-wide text-gray-700 font-medium">
@@ -72,7 +55,6 @@ const Hero = () => {
             occasion.
           </p>
         </div>
-
         <div className="flex justify-center lg:justify-end">
           <img
             src={Group}
@@ -82,9 +64,23 @@ const Hero = () => {
         </div>
       </div>
 
-      
       <div className="max-w-7xl mx-auto relative mt-12 sm:mt-16">
-        <Slider {...settings} className="px-6">
+        <div className="absolute pr-[64px] top-1/2 left-0 z-20 flex transform -translate-y-1/2 -translate-x-1/2 gap-2 lg:gap-4">
+          <button
+            onClick={() => sliderRef.current.slickPrev()}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
+          >
+            <IoIosArrowRoundBack className="text-2xl text-black" />
+          </button>
+          <button
+            onClick={() => sliderRef.current.slickNext()}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white  hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
+          >
+            <IoIosArrowRoundForward className="text-2xl text-black" />
+          </button>
+        </div>
+
+        <Slider {...settings} className="px-6" ref={sliderRef}>
           {categories.map((item, idx) => (
             <div key={idx} className="px-3">
               <div className="p-4 flex flex-col items-center gap-2 bg-white rounded-2xl shadow-sm hover:shadow-lg transition">

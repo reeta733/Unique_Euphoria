@@ -1,5 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 
@@ -46,7 +48,7 @@ const products = [
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -left-6 lg:-left-12 cursor-pointer bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 z-10"
+    className="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center cursor-pointer bg-white text-black rounded-full shadow-md hover:bg-gray-200 z-10"
   >
     <FaArrowLeft />
   </button>
@@ -55,14 +57,13 @@ const PrevArrow = ({ onClick }) => (
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -right-6 cursor-pointer lg:-right-12 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 z-10"
+    className="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center cursor-pointer bg-white text-black rounded-full shadow-md hover:bg-gray-200 z-10"
   >
     <FaArrowRight />
   </button>
 );
 
 const Products = () => {
-  
   const settings = {
     dots: false,
     infinite: true,
@@ -86,35 +87,28 @@ const Products = () => {
   return (
     <section className="bg-[var(--ink)] text-white py-16 relative">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        
         <h2 className="text-3xl font-serif lg:text-4xl font-bold mb-3 font-mariposa">
           Explore Our Products
         </h2>
         <p className="text-gray-300 mb-8 font-montserrat">
           Discover the Perfect Blend of Quality, Innovation, and Style
         </p>
-
-        
         <div className="flex justify-between items-center mb-10">
           <button className=" cursor-pointer px-5 py-1 rounded-full text-gray-800 bg-white font-montserrat font-medium 
-             hover:bg-[var(--primary)] hover:text-white transition duration-300 ease-in-out co">
+              hover:bg-[#E0AC85] hover:text-white transition duration-300 ease-in-out">
             New Arrivals
           </button>
-
           <button className=" cursor-pointer border border-gray-400 px-5 py-1 rounded-full text-sm 
-                   transition duration-300 ease-in-out
-                   hover:bg-[#E0AC85] hover:text-white hover:border-[#E0AC85]">
+                        transition duration-300 ease-in-out
+                        hover:bg-[#E0AC85] hover:text-white hover:border-[#E0AC85]">
             See All Product
           </button>
         </div>
-
-       
         <div className="relative">
           <Slider {...settings}>
             {products.map((item) => (
               <div key={item.id} className="px-3">
                 <div className="flex flex-col items-center w-full">
-                 
                   <div className="bg-white rounded-2xl shadow-md overflow-hidden w-full relative">
                     <img
                       src={item.img}
@@ -132,7 +126,6 @@ const Products = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="mt-4 text-center">
                     <h3 className="text-lg font-semibold text-white">
                       {item.name}

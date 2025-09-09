@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,34 +28,16 @@ const testimonials = [
   },
 ];
 
-
-const PrevArrow = ({ onClick }) => (
-  <button
-    onClick={onClick}
-    className="absolute -left-6 top-1/2 transform -translate-y-1/2 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200 z-10"
-  >
-    ←
-  </button>
-);
-
-const NextArrow = ({ onClick }) => (
-  <button
-    onClick={onClick}
-    className="absolute -right-6 top-1/2 transform -translate-y-1/2 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#b37b4d] text-white hover:bg-opacity-90 z-10"
-  >
-    →
-  </button>
-);
-
 const Testimonial = () => {
+  const sliderRef = useRef(null); 
+
   const settings = {
     dots: false, 
     infinite: true,
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    arrows: false,
   };
 
   return (
@@ -65,7 +47,7 @@ const Testimonial = () => {
         <p className="text-gray-400">Real Stories from Happy Customers</p>
       </div>
 
-      <Slider {...settings}>
+      <Slider {...settings} ref={sliderRef}>
         {testimonials.map((item, index) => (
           <div key={index}>
             <div className="flex flex-col-2 lg:flex-row items-center lg:items-start gap-12">
@@ -73,19 +55,34 @@ const Testimonial = () => {
                 <img
                   src={item.img}
                   alt="Customer"
-                  className="rounded-2xl w-[350px] p-2 object-scale-down md:object-cover"
+                  className="w-[350px] p-2 object-scale-down md:object-cover rounded-2xl"
                 />
               </div>
 
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left relative"> 
                 <div className="flex items-center mb-4">
-                  <span className="text-xl ">{"★".repeat(item.rating)}</span>
+                  <span className="text-xl">{"★".repeat(item.rating)}</span>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {item.text}
                 </p>
                 <p className="font-handwriting text-lg">{item.name}</p>
                 
+                
+                <div className="flex gap-4 mt-8 justify-end">
+                  <button
+                    onClick={() => sliderRef.current.slickPrev()}
+                    className="w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-white text-black hover:bg-gray-200"
+                  >
+                    ←
+                  </button>
+                  <button
+                    onClick={() => sliderRef.current.slickNext()}
+                    className="w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-[#b37b4d] text-white hover:bg-opacity-90"
+                  >
+                    →
+                  </button>
+                </div>
               </div>
             </div>
           </div>
