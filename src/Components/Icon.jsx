@@ -1,64 +1,46 @@
-import React from "react";
-import { FaRegThumbsUp } from "react-icons/fa";
-const Icon = () => {
+import React from 'react';
+import { FaShopify, FaUsers, FaCogs, FaGlobe, FaUndo } from 'react-icons/fa'; // Import icons from react-icons
+
+const features = [
+  { id: 1, icon: <FaShopify />, title: 'One-Stop Service' },
+  { id: 2, icon: <FaUsers />, title: 'Trusted By 800k+ Customers' },
+  { id: 3, icon: <FaCogs />, title: 'Customization Service' },
+  { id: 4, icon: <FaGlobe />, title: 'Worldwide Shipping' },
+  { id: 5, icon: <FaUndo />, title: 'Hassle-Free Return Policy' },
+];
+
+const WhyUniqueEuphoria = () => {
   return (
-    <div>
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light mb-4 text-gray-800 tracking-wider">
-     Why Unique Euphoria
-        </h1>
-        <p className="text-lg md:text-xl font-light mb-12 text-gray-600 tracking-wide">
+    <section className="bg-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl font-bold font-serif text-black mb-2">
+          Why Unique Euphoria
+        </h2>
+        <p className="text-gray-600 mb-12">
           The Unique Euphoria Difference
         </p>
-      </div>
-      <div className="flex flex-row md:flex-row justify-center items-center md:space-x-12 lg:space-x-24 space-y-8 md:space-y-0">
-        {/* <!-- Icon 1 --> */}
-        <div className="flex flex-col items-center max-w-[200px]">
-          <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#bda88f]">
-            <FaRegThumbsUp />
-          </div>
-          <h3 className="mt-4 text-base md:text-lg font-medium text-gray-800">
-            One-Stop Service
-          </h3>
-        </div>
-        {/* <!-- Icon 2 --> */}
-        <div className="flex flex-col items-center max-w-[200px]">
-          <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#bda88f]">
-            <FaRegThumbsUp />
-          </div>
-          <h3 className="mt-4 text-base md:text-lg font-medium text-gray-800">
-            Trusted By 800K+ Customers
-          </h3>
-        </div>
-        {/* <!-- Icon 3 --> */}
-        <div className="flex flex-col items-center max-w-[200px]">
-          <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#bda88f]">
-            <FaRegThumbsUp />
-          </div>
-          <h3 className="mt-4 text-base md:text-lg font-medium text-gray-800">
-            Customization Service
-          </h3>
-        </div>
-        {/* <!-- Icon 4 --> */}
-        <div className="flex flex-col items-center max-w-[200px]">
-          <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#bda88f]">
-            <FaRegThumbsUp />
-          </div>
-          <h3 className="mt-4 text-base md:text-lg font-medium text-gray-800">
-            Worldwide Shipping
-          </h3>
-        </div>
-        <div className="flex flex-col items-center max-w-[200px]">
-          <div className="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#bda88f]">
-            <FaRegThumbsUp />
-          </div>
-          <h3 className="mt-4 text-base md:text-lg font-medium text-gray-800">
-            Hassle-Free Return Policy
-          </h3>
+
+        <div className="flex flex-wrap justify-center md:justify-between items-start">
+          {features.map((feature) => (
+            <div key={feature.id} className="flex flex-col items-center mx-4 my-6 md:my-0 w-32">
+              <div className="relative">
+                {feature.id > 1 && (
+                  <div className="absolute top-1/2 left-0 w-20 h-0.5 bg-gray-300 transform -translate-x-full"></div>
+                )}
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-md border border-gray-300">
+                 
+                  <span className="text-2xl text-[#BE9B81]">{feature.icon}</span> 
+                </div>
+              </div>
+              <p className="mt-4 text-sm font-medium text-gray-800">
+                {feature.title}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Icon;
+export default WhyUniqueEuphoria;

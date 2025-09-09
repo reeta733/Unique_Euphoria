@@ -17,6 +17,10 @@ const Hero = () => {
     { name: "Wig Collection", img: Hair6 },
     { name: "Hair Lace", img: Hair4 },
     { name: "New Arrivals", img: Hair3 },
+    { name: "Topper Collection", img: Hair2 },
+    { name: "Wig Collection", img: Hair6 },
+    { name: "Hair Lace", img: Hair4 },
+    { name: "New Arrivals", img: Hair3 },
   ];
 
   const sliderRef = useRef(null);
@@ -26,7 +30,7 @@ const Hero = () => {
     arrows: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
