@@ -84,9 +84,7 @@ const Collection = () => {
           <h1 className="text-white text-4xl md:text-6xl font-playfair font-bold mb-4">
             Client Testimonials
           </h1>
-          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto px-4">
-            Hear what our satisfied clients have to say about their experience
-          </p>
+         
         </div>
       </section>
       <Items />

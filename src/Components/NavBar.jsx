@@ -12,7 +12,7 @@ const Navbar = () => {
         </div>
 
       
-        <nav className="flex items-center gap-8 text-sm sm:text-base font-medium text-gray-800 font-montserrat ">
+        <nav className="flex items-center gap-8 text-sm sm:text-base font-medium  font-montserrat ">
           <NavLink to="/" className="hover:text-[#E0AC85]">
             Home
           </NavLink>
