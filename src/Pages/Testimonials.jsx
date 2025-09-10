@@ -3,6 +3,7 @@ import NavBar from "../Components/NavBar";
 import ClientTestimonialsImg from "../assets/Images/ClientTestimonials.jpg";
 import TestimonialCard from "../Components/TestimonialCard";
 import Testimonial from "../Components/Testimonial";
+import RealLife from "../Components/RealLife";
 const Testimonials = () => {
   return (
     <>
@@ -10,7 +11,6 @@ const Testimonials = () => {
       className="w-full h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
       style={{ backgroundImage: `url(${ClientTestimonialsImg})` }}
     >
-      {/* NavBar is now placed directly inside the section */}
       <div className="absolute top-0 left-0 w-full z-50">
         <NavBar />
       </div>
@@ -23,10 +23,10 @@ const Testimonials = () => {
         </h1>
        
       </div>
-    </section>
-    <TestimonialCard/>
+    </section>.
+    <RealLife/>
     <Testimonial/>
-     <TestimonialCard/>
+     <RealLife/>
     </>
     
   );

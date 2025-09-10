@@ -103,7 +103,6 @@ const ProductSlider = () => {
         </div>
       </div>
 
-      {/* Slick Slider */}
       <div className="relative w-full max-w-6xl">
         <Slider {...settings}>
           {products.map((product, index) => (

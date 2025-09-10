@@ -32,7 +32,7 @@ const videos = [
   },
 ];
 
-// Custom Arrows
+
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
