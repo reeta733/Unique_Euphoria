@@ -19,11 +19,12 @@ const Navbar = () => {
           <NavLink to="/about" className="hover:text-[#E0AC85]">
             About
           </NavLink>
-          <NavLink to="/awards" className="hover:text-[#E0AC85]">
-            Awards
-          </NavLink>
+        
           <NavLink to="/testimonials" className="hover:text-[#E0AC85]">
             Testimonials
+          </NavLink>
+            <NavLink to="/collection" className="hover:text-[#E0AC85]">
+            Collection
           </NavLink>
         </nav>
 

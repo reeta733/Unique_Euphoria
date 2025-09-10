@@ -29,14 +29,14 @@ const InfoSection = () => {
       <div className="flex items-center justify-center px-8 ">
         <div className="w-1/2 pr-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif ">
-            Choose Your <br /> Perfect Hair
+            Easily place <br /> your order
           </h2>
           <p className="text-gray-600 mb-6">
-            Find the perfect match from our premium collection of 100% Raw hair.
-            Whether you're looking for volume, length, or a complete
-            transformation, we have it all.
+            Enjoy a seamless shopping experience with our secure checkout and
+            fast shipping. Choose your preferred length, texture, and style with
+            just a few clicks.
           </p>
-        <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
+          <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
             View Collection
           </button>
         </div>
@@ -60,14 +60,15 @@ const InfoSection = () => {
 
         <div className="w-1/2 pl-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
-            Choose Your <br /> Perfect Hair
+            Style With <br /> Confidence
           </h2>
           <p className="text-gray-600 mb-6 text-balance ">
-            Find the perfect match from our premium collection of 100% Raw hair.
-            Whether you're looking for volume, length, or a complete
-            transformation, we have it all.
+            Unleash your beauty with premium quality hair that speaks volumes!
+            whether you love sleek and straight, bold and curly, or luxurious
+            waves, Unique Euphoria has the perfect bundles to match your
+            vibe.{" "}
           </p>
-         <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
+          <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
             View Collection
           </button>
         </div>

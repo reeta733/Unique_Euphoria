@@ -71,7 +71,7 @@ const TestimonialCard = () => {
                   <img
                     src={item.img}
                     alt="Testimonial"
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="  object-cover rounded-lg"
                   />
                   <div className="absolute inset-0 flex justify-center items-center">
                     <div className="w-12 h-12 flex items-center justify-center bg-white/80 rounded-full shadow-lg cursor-pointer hover:bg-[#E0AC85] hover:text-white transition">

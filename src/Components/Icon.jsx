@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaShopify, FaUsers, FaCogs, FaGlobe, FaUndo } from 'react-icons/fa'; // Import icons from react-icons
+import { FaShopify, FaUsers, FaCogs, FaGlobe, FaUndo } from 'react-icons/fa'; 
 
 const features = [
   { id: 1, icon: <FaShopify />, title: 'One-Stop Service' },

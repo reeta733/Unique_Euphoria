@@ -3,7 +3,7 @@ import model5 from "../assets/Images/model5.png";
 const Appointment = () => {
   return (
     <>
-   <section className="container mx-auto ">
+   <section className="container mx-auto py-16 px-4 sm:px-6 lg:px-12">
       <div className=" mx-auto grid grid-cols-2 md:grid-cols-2">
         
         <div className="w-60 h-48 overflow-hidden  md:h-96">

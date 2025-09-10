@@ -15,17 +15,17 @@ const App = () => {
   return (
     <>
       <div className="">
-        <Navbar />
+        {/* <Navbar /> */}
 
-        {/* <AppRoutes/> */}
-        <Hero />
-        <Products />
-        <InfoSection />
-        <TestimonialCard />
-        <Icon />
-        <Testimonial />
-        <Newsletter />
-        <Appointment />
+        <AppRoutes/>
+        {/* <Hero /> */}
+        {/* <Products /> */}
+        {/* <InfoSection /> */}
+        {/* <TestimonialCard /> */}
+        {/* <Icon /> */}
+        {/* <Testimonial /> */}
+        {/* <Newsletter /> */}
+        {/* <Appointment /> */}
         <Footer />
       </div>
     </>
