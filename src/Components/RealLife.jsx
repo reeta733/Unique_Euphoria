@@ -5,11 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import { FaPlay } from "react-icons/fa";
 
-import model7 from "../../src/assets/Images/model7.png";
-import model9 from "../../src/assets/Images/model9.png";
-import model12 from "../../src/assets/Images/model12.png";
-import model6 from "../../src/assets/Images/model6.png";
-
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
@@ -32,11 +27,10 @@ const NextArrow = ({ onClick }) => (
   </button>
 );
 
-const RealLife = () => {
-  const testimonials = useMemo(
-    () => [{ img: model7 }, { img: model9 }, { img: model12 }, { img: model6 }],
-    []
-  );
+
+const RealLife = ({ title, subtitle, testimonials }) => {
+  
+  const dataToShow = testimonials || [];
 
   const settings = useMemo(
     () => ({
@@ -59,15 +53,14 @@ const RealLife = () => {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold font-serif mb-3 text-black">
-          See It In Real Life
+          {title}
         </h2>
-        <p className="text-black mb-8">
-          Bringing Concepts to Life - See, Feel, and Experience the Difference
-        </p>
+        <p className="text-black mb-8">{subtitle}</p>
 
         <div className="relative">
           <Slider {...settings}>
-            {testimonials.map((item, index) => (
+            
+            {dataToShow.map((item, index) => (
               <div key={index} className="relative px-3 group">
                 <img
                   src={item.img}

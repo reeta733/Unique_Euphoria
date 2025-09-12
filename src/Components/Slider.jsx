@@ -10,7 +10,7 @@ import Hair3 from "../assets/Images/Hair3.jpg";
 import Hair4 from "../assets/Images/Hair4.jpg";
 import Hair5 from "../assets/Images/Hair5.jpg";
 
-// ✅ Product Data with Categories
+
 const products = [
   { image: Hair1, discount: "25% off", name: "Italian Wave", category: "Wavy" },
   { image: Hair2, discount: "25% off", name: "Straights", category: "Straight" },
@@ -19,7 +19,7 @@ const products = [
   { image: Hair5, discount: "25% off", name: "Curly Bounce", category: "Curly" },
 ];
 
-// ✅ Custom Arrows
+
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
@@ -41,7 +41,7 @@ const PrevArrow = ({ onClick }) => (
 const ProductSlider = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // ✅ Filter products based on category
+
   const filteredProducts = useMemo(() => {
     if (activeCategory === "All") return products;
     return products.filter((p) => p.category === activeCategory);
@@ -62,7 +62,7 @@ const ProductSlider = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] text-black p-8 flex flex-col items-center justify-center font-inter">
+    <div className="container min-h-screen bg-[#FDFBF7] text-black p-8 flex flex-col items-center justify-center font-inter">
  
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#333]">

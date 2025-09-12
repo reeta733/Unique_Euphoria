@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header className="">
+    <header className=" container ">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 lg:px-12 border-4 border-[#E0AC85]/40 rounded-full mt-4"> 
         
         <div className="flex items-center gap-2">

@@ -54,7 +54,7 @@
 
 
 @layer utilities {
-  .container-px {}
+  
 
   .card {
     background: var(--color-panel);
