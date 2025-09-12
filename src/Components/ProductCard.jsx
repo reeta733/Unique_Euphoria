@@ -34,7 +34,6 @@ const ProductCard = () => {
           </p>
         </div>
 
-        {/* Add to Cart Button */}
         <button className="w-full cursor-pointer mt-4 bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors duration-300">
           Add to Cart
         </button>

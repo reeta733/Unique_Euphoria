@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,39 +6,40 @@ import model3 from "../../src/assets/Images/model3.jpg";
 import model6 from "../../src/assets/Images/model6.png"; 
 import model12 from "../../src/assets/Images/model12.png";
 
-
-const testimonials = [
-  {
-    img: model3,
-    name: "Samantha R.",
-    rating: 5,
-    text: "I was hesitant to try a new stylist, but this website made it so easy to find the perfect match! The recommendations were spot-on, and I couldn't be happier with my haircut. The stylist understood exactly what I wanted and even suggested a few enhancements that made my hair look even better. I've received so many compliments—I'll definitely be back.",
-  },
-  {
-    img: model6,
-    name: "Jessica K.",
-    rating: 4,
-    text: "Amazing experience! The stylist was professional and listened to my needs. My hair has never looked better.",
-  },
-  {
-    img: model12,
-    name: "Olivia M.",
-    rating: 5,
-    text: "Highly recommend! The website made booking so simple, and the stylist's suggestions were perfect.",
-  },
-];
-
 const Testimonial = () => {
   const sliderRef = useRef(null); 
 
-  const settings = {
+
+  const testimonials = useMemo(() => [
+    {
+      img: model3,
+      name: "Samantha R.",
+      rating: 5,
+      text: "I was hesitant to try a new stylist, but this website made it so easy to find the perfect match! The recommendations were spot-on, and I couldn't be happier with my haircut. The stylist understood exactly what I wanted and even suggested a few enhancements that made my hair look even better. I've received so many compliments—I'll definitely be back.",
+    },
+    {
+      img: model6,
+      name: "Jessica K.",
+      rating: 4,
+      text: "Amazing experience! The stylist was professional and listened to my needs. My hair has never looked better.",
+    },
+    {
+      img: model12,
+      name: "Olivia M.",
+      rating: 5,
+      text: "Highly recommend! The website made booking so simple, and the stylist's suggestions were perfect.",
+    },
+  ], []); 
+
+
+  const settings = useMemo(() => ({
     dots: false, 
     infinite: true,
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-  };
+  }), []); 
 
   return (
     <div className="bg-black text-white py-16 px-6 lg:px-20">
@@ -67,7 +68,6 @@ const Testimonial = () => {
                   {item.text}
                 </p>
                 <p className="font-handwriting text-lg">{item.name}</p>
-                
                 
                 <div className="flex gap-4 mt-8 justify-end">
                   <button

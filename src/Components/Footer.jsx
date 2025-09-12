@@ -61,7 +61,7 @@ export default function Footer() {
     
 
     
-    <div className="">
+    <div className="justify-items-center-safe">
       <h3 className="text-white font-semibold mb-4">Quick Links</h3>
       <ul className="space-y-0">
         <li><a href="#">Home</a></li>
@@ -75,7 +75,7 @@ export default function Footer() {
     </div>
 
    
-    <div>
+    <div className="justify-items-center-safe">
       <h3 className="text-white font-semibold mb-4">Our Services</h3>
       <ul className="space-y-2">
         <li>Volume</li>
@@ -87,19 +87,19 @@ export default function Footer() {
     </div>
 
     
-    <div>
+    <div className="justify-items-center-safe">
       <h3 className="text-white font-semibold mb-4">Get in Touch</h3>
-      <ul className="space-y-2">
+      <ul className="space-y-2 justify-items-center-safe">
         <li>+91 00000 00000</li>
-        <li>Buddha Jadawadi,<br />Opp Digital Equipment Ltd,<br />Mumbai</li>
+        <li className="space-y-2 justify-items-center-safe"> Buddha Jadawadi,<br />Opp Digital Equipment Ltd,<br />Mumbai</li>
       </ul>
     </div>
   </div>
 </div>
 
   
-  <div className="py-4 px-6 lg:px-20 flex flex-col lg:flex-row justify-between items-center text-gray-500 text-xs">
-    <p>© 2025 Unique Euphoria. All rights reserved.</p>
+  <div className="py-4 px-6 lg:px-20 flex flex-col-2 lg:flex-row justify-between  text-gray-500 text-xs">
+    <p className="items-center">© 2025 Unique Euphoria. All rights reserved.</p>
     <div className="flex space-x-6 mt-2 lg:mt-0">
       <a href="#" className="hover:underline ">Terms and Condition</a>
       <a href="#" className="hover:underline ">Return Policy</a>

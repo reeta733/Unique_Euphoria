@@ -1,20 +1,18 @@
 import React from "react";
 import Icon from "../Components/Icon";
-import Footer from "../Components/Footer";
+
 import NavBar from "../Components/NavBar";
 import Testimonial from "../Components/Testimonial";
 import Appointment from "../Components/Appointment";
-import model11 from "../assets/Images/model11.png";
+
 import model13 from "../assets/Images/model13.png";
 import model14 from "../assets/Images/model14.png";
-import hair1 from "../assets/Images/Hair1.jpg";
-import hair5 from "../assets/Images/Hair5.jpg";
 
 const About = () => {
   return (
     <>
       <NavBar />
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-12">
+      <section className=" py-16 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-2 gap-12 items-start">
           <div className="text-left space-y-6">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
@@ -137,7 +135,6 @@ const About = () => {
       <Icon />
       <Testimonial />
       <Appointment />
-      <Footer />
     </>
   );
 };

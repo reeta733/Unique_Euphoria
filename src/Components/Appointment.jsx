@@ -1,41 +1,48 @@
-import React from "react";
-import model5 from "../assets/Images/model5.png";
-const Appointment = () => {
-  return (
-    <>
-   <section className="container mx-auto py-16 px-4 sm:px-6 lg:px-12">
-      <div className=" mx-auto grid grid-cols-2 md:grid-cols-2">
-        
-        <div className="w-60 h-48 overflow-hidden  md:h-96">
-          <img
-            src={model5}
-            alt="Consultation Model"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import model5 from '../assets/Images/model5.png';
 
-        
-        <div className="bg-[#BE9B81] p-10 md:p-16 flex flex-col justify-center text-left">
-          <div className="ml-auto">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-2">
-              Have Any Questions?
-              <br />
-              Get Free Consultation
-            </h2>
-            <p className="text-sm md:text-base font-sans font-normal text-gray-700 mb-6">
-              Expert Advice Just a Click Away!
-            </p>
-            <div className="flex justify-left">
-              <button className="bg-black text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition-colors duration-300">
-                Get Appointment
-              </button>
+const App = () => {
+    return (
+        <div className="min-h-screen flex justify-center items-center">
+            <div className="container mx-auto max-w-7xl rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative flex flex-col md:flex-row items-center">
+                   
+                    <div className="md:w-full w-full relative">
+                        <img 
+                            src={model5} 
+                            alt="Unique Euphoria Model" 
+                            className="w-full h-auto object-fill"
+                            style={{ 
+                              objectPosition: 'top center',
+                              maxHeight: '500px'
+                              
+                
+                             }}
+                        />
+                
+                        <div 
+                            className="absolute inset-0 bg-[#b0967c] opacity-82"
+                           
+                        ></div>
+                    </div>
+                    
+                    
+                    <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8 md:p-12">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-2 leading-tight text-black" >
+                            Have Any Questions?<br/>Get Free Consultation
+                        </h2>
+                        <p className="text-sm font-medium italic mb-6 text-black">
+                            Expert Advice Just a Click Away!
+                        </p>
+                        <button className="bg-black text-white rounded-full px-8 py-3 font-semibold transition-all duration-300 hover:bg-gray-800">
+                            Get Appointment
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    </>
-  );
+    );
 };
 
-export default Appointment;
+export default App;

@@ -10,40 +10,7 @@ const TestimonialCard = () => {
 
   return (
     <div className="relative">
-      {/* <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold font-serif mb-3 text-black">
-            See It In Real Life
-          </h2>
-          <p className="text-black mb-8">
-            Bringing Concepts to Life - See, Feel, and Experience the Difference
-          </p>
-
-          <div className="relative">
-            <Slider {...settings}>
-              {testimonials.map((item, index) => (
-                <div key={index} className="relative px-3">
-                  <img
-                    src={item.img}
-                    alt="Testimonial"
-                    className="  object-cover rounded-lg"
-                  />
-                  <div className="absolute inset-0 flex justify-center items-center">
-                    <div className="w-12 h-12 flex items-center justify-center bg-white/80 rounded-full shadow-lg cursor-pointer hover:bg-[#E0AC85] hover:text-white transition">
-                      <FaPlay className="text-black group-hover:text-white" />
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 flex justify-center items-end mb-4">
-                    <button className="bg-white text-black cursor-pointer rounded-full shadow px-4 py-1 text-sm hover:bg-[#E0AC85] hover:text-white transition">
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-      </section> */}
+      
       <RealLife/>
 
       <section className="bg-white text-gray-900 py-16">

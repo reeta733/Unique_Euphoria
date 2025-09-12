@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,37 +12,37 @@ import Hair4 from "../../src/assets/Images/Hair4.jpg";
 import Hair3 from "../../src/assets/Images/Hair3.jpg";
 
 const Hero = () => {
-  const categories = [
-    { name: "Topper Collection", img: Hair2 },
-    { name: "Wig Collection", img: Hair6 },
-    { name: "Hair Lace", img: Hair4 },
-    { name: "New Arrivals", img: Hair3 },
-    { name: "Topper Collection", img: Hair2 },
-    { name: "Wig Collection", img: Hair6 },
-    { name: "Hair Lace", img: Hair4 },
-    { name: "New Arrivals", img: Hair3 },
-  ];
-
   const sliderRef = useRef(null);
 
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1 },
-      },
+  const categories = useMemo(
+    () => [
+      { name: "Topper Collection", img: Hair2 },
+      { name: "Wig Collection", img: Hair6 },
+      { name: "Hair Lace", img: Hair4 },
+      { name: "New Arrivals", img: Hair3 },
+      { name: "Topper Collection", img: Hair2 },
+      { name: "Wig Collection", img: Hair6 },
+      { name: "Hair Lace", img: Hair4 },
+      { name: "New Arrivals", img: Hair3 },
     ],
-  };
+    []
+  );
+
+  const settings = useMemo(
+    () => ({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      speed: 600,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        { breakpoint: 1024, settings: { slidesToShow: 2 } },
+        { breakpoint: 640, settings: { slidesToShow: 1 } },
+      ],
+    }),
+    []
+  );
 
   return (
     <section className="relative lg:py-16 px-4 sm:px-6 lg:px-12">
@@ -59,6 +59,7 @@ const Hero = () => {
             occasion.
           </p>
         </div>
+
         <div className="flex justify-center lg:justify-end">
           <img
             src={Group}
@@ -78,7 +79,7 @@ const Hero = () => {
           </button>
           <button
             onClick={() => sliderRef.current.slickNext()}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white  hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
           >
             <IoIosArrowRoundForward className="text-2xl text-black" />
           </button>
