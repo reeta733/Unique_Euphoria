@@ -70,41 +70,49 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative mt-12 sm:mt-16">
-        <div className="absolute pr-[64px] top-1/2 left-0 z-20 flex transform -translate-y-1/2 -translate-x-1/2 gap-2 lg:gap-4">
-          <button
-            onClick={() => sliderRef.current.slickPrev()}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
-          >
-            <IoIosArrowRoundBack className="text-2xl text-black" />
-          </button>
-          <button
-            onClick={() => sliderRef.current.slickNext()}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
-          >
-            <IoIosArrowRoundForward className="text-2xl text-black" />
-          </button>
-        </div>
+  {/* Navigation Buttons */}
+  <div className="absolute inset-y-0 left-0 flex items-center pl-2 sm:pl-4 z-20">
+    <button
+      onClick={() => sliderRef.current.slickPrev()}
+      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white shadow-md 
+                 hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
+    >
+      <IoIosArrowRoundBack className="text-xl sm:text-2xl text-black" />
+    </button>
+  </div>
 
-        <Slider {...settings} className="px-6" ref={sliderRef}>
-          {categories.map((item, idx) => (
-            <div key={idx} className="px-3">
-              <div className="p-4 flex flex-col items-center gap-2 bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="w-full h-28 sm:h-32 lg:h-36 object-cover rounded-xl"
-                />
-                <div className="flex items-center justify-between w-full mt-2">
-                  <p className="text-sm sm:text-base font-medium text-gray-800">
-                    {item.name}
-                  </p>
-                  <MdArrowOutward className="text-base text-black" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+  <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:pr-4 z-20">
+    <button
+      onClick={() => sliderRef.current.slickNext()}
+      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white shadow-md 
+                 hover:text-white hover:bg-[var(--primary)] transition cursor-pointer duration-300 ease-in-out"
+    >
+      <IoIosArrowRoundForward className="text-xl sm:text-2xl text-black" />
+    </button>
+  </div>
+
+  {/* Slider */}
+  <Slider {...settings} className="px-4 sm:px-6" ref={sliderRef}>
+    {categories.map((item, idx) => (
+      <div key={idx} className="px-2 sm:px-3">
+        <div className="p-4 flex flex-col items-center gap-2 bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
+          <img
+            src={item.img}
+            alt={item.name}
+            className="w-full h-24 sm:h-32 lg:h-36 object-cover rounded-xl"
+          />
+          <div className="flex items-center justify-between w-full mt-2">
+            <p className="text-sm sm:text-base font-medium text-gray-800">
+              {item.name}
+            </p>
+            <MdArrowOutward className="text-base sm:text-lg text-black" />
+          </div>
+        </div>
       </div>
+    ))}
+  </Slider>
+</div>
+
     </section>
   );
 };

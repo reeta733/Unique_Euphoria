@@ -38,7 +38,7 @@ const PrevArrow = ({ onClick }) => (
   </button>
 );
 
-const ProductSlider = () => {
+const ProductSlider = ({title}) => {
   const [activeCategory, setActiveCategory] = useState("All");
 
 
@@ -66,7 +66,7 @@ const ProductSlider = () => {
  
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#333]">
-          Luxury Hair Extensions
+          {title}
         </h2>
 
     

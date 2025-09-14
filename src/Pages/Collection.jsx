@@ -39,7 +39,7 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const Collection = () => {
-  // ✅ Memoize video data
+  
   const videos = useMemo(
     () => [
       { image: model15, title: "Video Tutorial By Our Professional Team" },
@@ -84,10 +84,9 @@ const Collection = () => {
         </div>
       </section>
 
-      <Items />
-      <Items />
+      <Items title={<h1 className="text-4xl md:text-5xl font-serif font-bold text-[#333]">Luxury Hair Extensions</h1>} />
+      <Items title={<h1 className="text-4xl md:text-5xl font-serif font-bold text-[#333]">Premium Wigs</h1>} />
 
-   
       <div className="min-h-screen bg-[#ECDED3] text-black p-8 flex flex-col items-center justify-center font-inter">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#333]">
@@ -127,7 +126,7 @@ const Collection = () => {
         </div>
       </div>
 
-      <Items />
+      <Items title={<h1 className="text-4xl md:text-5xl font-serif font-bold text-[#333]">Best Seller</h1>} />
     </>
   );
 };

@@ -2,18 +2,19 @@ import React from "react";
 
 const InfoSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-12  bg-white">
-      <div className="flex items-center justify-center px-8  ">
-        <div className="w-1/2 flex justify-center items-start pt-0">
+    <div className="flex flex-col items-center justify-center px-6 md:px-12 bg-white">
+      
+      <div className="flex flex-col md:flex-row items-center justify-center px-8">
+        <div className="w-full md:w-1/2 flex justify-center items-start pt-0">
           <img
             src="../../src/assets/Images/Hair4.jpg"
             alt="Hair Collection"
-            className=" w-full h-[500px]  object-cover  shadow-md"
+            className="w-full h-[500px] object-cover shadow-md"
           />
         </div>
 
-        <div className="w-1/2 pl-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif ">
+        <div className="w-full md:w-1/2 md:pl-12 mt-8 md:mt-0 text-center md:text-left">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
             Choose Your <br /> Perfect Hair
           </h2>
           <p className="text-gray-600 mb-6 text-justify text-wrap">
@@ -26,9 +27,11 @@ const InfoSection = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-center px-8 ">
-        <div className="w-1/2 pr-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif ">
+
+      
+      <div className="flex flex-col md:flex-row items-center justify-center px-8 mt-16 md:mt-24">
+        <div className="w-full md:w-1/2 md:pr-12 order-2 md:order-1 mt-8 md:mt-0 text-center md:text-left">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
             Easily place <br /> your order
           </h2>
           <p className="text-gray-600 mb-6">
@@ -41,32 +44,33 @@ const InfoSection = () => {
           </button>
         </div>
 
-        <div className="w-1/2 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2">
           <img
             src="../../src/assets/Images/hair5.jpg"
             alt="Hair Collection"
-            className=" w-full h-[500px] object-cover  shadow-md"
+            className="w-full h-[500px] object-cover shadow-md"
           />
         </div>
       </div>
-      <div className="flex items-center justify-center px-8 ">
-        <div className="w-1/2 flex justify-center">
+
+      
+      <div className="flex flex-col md:flex-row items-center justify-center px-8 mt-16 md:mt-24">
+        <div className="w-full md:w-1/2 flex justify-center items-start">
           <img
             src="../../src/assets/Images/Hair2.jpg"
             alt="Hair Collection"
-            className=" w-full h-[500px]  object-cover shadow-md"
+            className="w-full h-[500px] object-cover shadow-md"
           />
         </div>
 
-        <div className="w-1/2 pl-12">
+        <div className="w-full md:w-1/2 md:pl-12 mt-8 md:mt-0 text-center md:text-left">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
             Style With <br /> Confidence
           </h2>
-          <p className="text-gray-600 mb-6 text-balance ">
+          <p className="text-gray-600 mb-6 text-balance">
             Unleash your beauty with premium quality hair that speaks volumes!
             whether you love sleek and straight, bold and curly, or luxurious
-            waves, Unique Euphoria has the perfect bundles to match your
-            vibe.{" "}
+            waves, Unique Euphoria has the perfect bundles to match your vibe.{" "}
           </p>
           <button className="px-6 py-2 bg-[var(--primary)] text-white rounded-full cursor-pointer hover:bg-[#E0AC85] hover:text-white hover:scale-105 transition-all duration-300">
             View Collection

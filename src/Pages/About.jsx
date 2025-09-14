@@ -61,7 +61,7 @@ const About = () => {
         </div>
       </section>
 
-      <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-12  bg-white">
+      <div className=" grid grid-row items-start justify-center px-6 md:px-12  bg-white">
         <div className="flex items-center justify-center px-8  ">
           <div className="w-1/2 flex justify-center items-start pt-0">
             <img

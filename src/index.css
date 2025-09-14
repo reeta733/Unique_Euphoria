@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
 /* @tailwind base; */
 /* @tailwind components; */
 @tailwind utilities;
@@ -15,6 +15,10 @@
   --brand-text: #BE9B81;
   --primary: #b48159;
 
+  font-family: var(--sans-serif, sans-serif,monospace, system-ui,);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: 400;
 
 
   /* Radii */
@@ -24,6 +28,13 @@
 
 
 @theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1920px;
+
   /* Colors */
   --color-bg: #e4d2c4;
   --color-ink: #213547;
@@ -41,14 +52,16 @@
   #root {
     --color-from: #E0AC85;
     --color-to: #e4d2c4;
-    height: 100%;
-    margin: 0;
+    background: linear-gradient(135deg, var(--color-from), var(--color-to));
+  
     background: var(--color-bg);
-    line-height: 1.5;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    /* overflow: hidden; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
   }
 }
 
@@ -65,7 +78,7 @@
 
   .btn {
     background-color: var(--color-button);
-    /* color: white; */
+    color: white;
     font-weight: 500;
     font-size: 1rem;
     padding: 0.6em 1.2em;
