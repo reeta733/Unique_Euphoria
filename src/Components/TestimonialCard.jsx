@@ -4,7 +4,7 @@ import model4 from "../../src/assets/Images/model4.png";
 
 const TestimonialCard = () => {
   return (
-    <div className="relative">
+    <div className="relative no-space">
       <RealLife />
 
       <section className="bg-white text-gray-900 py-16">

@@ -7,14 +7,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex justify-center w-full">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 sm:px-6 lg:px-12 border-4 border-[#E0AC85]/40 rounded-full mt-4 bg-[#f5e2d2] shadow-md">
-      
+    <header className="flex flex-col items-center w-full">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 sm:px-6 lg:px-12 border-4 border-[#E0AC85]/40 rounded-full mt-4  shadow-md w-full">
         <div className="flex items-center gap-2">
           <img src={Logo} alt="Unique Euphoria" className="h-10" />
         </div>
 
-    
         <nav className="hidden md:flex items-center gap-8 text-sm sm:text-base font-medium font-montserrat">
           <NavLink to="/" className="hover:text-[#E0AC85]">
             Home
@@ -30,12 +28,10 @@ const Navbar = () => {
           </NavLink>
         </nav>
 
-      
         <button className="hidden md:block px-5 py-2 rounded-full text-gray-800 bg-white font-montserrat font-medium hover:text-white hover:bg-[var(--primary)] transition duration-300 ease-in-out">
           Explore Collection
         </button>
 
-      
         <button
           className="md:hidden p-2 rounded-md border border-[#E0AC85] text-gray-800"
           onClick={() => setIsOpen(!isOpen)}
@@ -48,10 +44,9 @@ const Navbar = () => {
         </button>
       </div>
 
- 
-      {isOpen && (
-        <div className="md:hidden w-full bg-white shadow-md rounded-b-xl animate-slideDown mt-2 border border-[#E0AC85]/40">
-          <nav className="flex flex-col items-center gap-4 py-4 text-base font-montserrat">
+      <div className={`md:hidden w-full ${isOpen ? "block" : "hidden"} mt-4`}>
+        <nav className="w-full bg-[#f5e2d2] shadow-md rounded-xl animate-slideDown border border-[#E0AC85]/40">
+          <div className="flex flex-col items-center gap-4 py-4 text-base font-montserrat">
             <NavLink
               to="/"
               className="hover:text-[#E0AC85]"
@@ -83,9 +78,9 @@ const Navbar = () => {
             <button className="px-5 py-2 rounded-full text-gray-800 bg-white border border-[#E0AC85] font-medium hover:text-white hover:bg-[var(--primary)] transition duration-300 ease-in-out">
               Explore Collection
             </button>
-          </nav>
-        </div>
-      )}
+          </div>
+        </nav>
+      </div>
     </header>
   );
 };

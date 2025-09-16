@@ -15,7 +15,7 @@
   --brand-text: #BE9B81;
   --primary: #b48159;
 
-  font-family: var(--sans-serif, sans-serif,monospace, system-ui,);
+  font-family: var(--sans-serif, sans-serif, monospace, system-ui, );
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   font-weight: 400;
@@ -42,7 +42,7 @@
   /* --color-link: #646cff; */
   /* --color-link-hover: #747bff; */
   /* --color-button: #1a1a1a; */
-  --font-roboto: "Roboto", sans-serif; 
+  --font-roboto: "Roboto", sans-serif;
 }
 
 @layer base {
@@ -53,7 +53,7 @@
     --color-from: #E0AC85;
     --color-to: #e4d2c4;
     background: linear-gradient(135deg, var(--color-from), var(--color-to));
-  
+
     background: var(--color-bg);
     overflow-x: hidden;
     /* overflow-y: hidden; */
@@ -67,7 +67,10 @@
 
 
 @layer utilities {
-  
+  .no-space {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
   .card {
     background: var(--color-panel);
