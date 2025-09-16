@@ -70,7 +70,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative mt-12 sm:mt-16">
-  {/* Navigation Buttons */}
+
   <div className="absolute inset-y-0 left-0 flex items-center pl-2 sm:pl-4 z-20">
     <button
       onClick={() => sliderRef.current.slickPrev()}
@@ -91,7 +91,7 @@ const Hero = () => {
     </button>
   </div>
 
-  {/* Slider */}
+
   <Slider {...settings} className="px-4 sm:px-6" ref={sliderRef}>
     {categories.map((item, idx) => (
       <div key={idx} className="px-2 sm:px-3">

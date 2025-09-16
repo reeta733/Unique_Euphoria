@@ -21,9 +21,9 @@ const WhyUniqueEuphoria = () => {
           The Unique Euphoria Difference
         </p>
 
-        {/* Features */}
+
         <div>
-          {/* Mobile: horizontal scroll */}
+          
           <div className="flex sm:hidden overflow-x-auto space-x-6 scrollbar-hide px-2">
             {features.map((feature) => (
               <div
@@ -40,7 +40,7 @@ const WhyUniqueEuphoria = () => {
             ))}
           </div>
 
-          {/* Tablet & Desktop: grid */}
+          
           <div className="hidden sm:grid grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-12">
             {features.map((feature) => (
               <div

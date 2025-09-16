@@ -4,10 +4,9 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 text-sm font-sans">
-      {/* Top Border */}
+    
       <div className="w-full border-b border-gray-700 pt-10 px-6 lg:px-20"></div>
 
-      {/* Subscribe Section */}
       <div className="py-10 px-6 lg:px-20">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-6">
           <div className="flex-1 text-center lg:text-left">
@@ -20,7 +19,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Divider (Desktop only) */}
+         
           <div className="hidden lg:block border-l border-gray-700 h-16 mx-6"></div>
 
           <div className="flex-1 w-full lg:max-w-md">
@@ -41,13 +40,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Border */}
       <div className="w-full border-b border-gray-700 py-4 px-6 lg:px-20"></div>
 
-      {/* Links Section */}
       <div className="py-10 px-6 lg:px-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 text-center lg:text-left">
-          {/* About */}
+       
           <div>
             <h3 className="text-white font-semibold mb-4">Unique Euphoria</h3>
             <p className="mb-4 text-gray-400 text-sm leading-relaxed">
@@ -78,7 +75,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+       
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -97,7 +94,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+        
           <div>
             <h3 className="text-white font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
@@ -116,7 +113,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+     
           <div>
             <h3 className="text-white font-semibold mb-4">Get in Touch</h3>
             <ul className="space-y-2">
@@ -133,10 +130,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Border */}
+
       <div className="w-full border-b border-gray-700"></div>
 
-      {/* Bottom Bar */}
+
       <div className="py-4 px-6 lg:px-20 flex flex-col lg:flex-row justify-between items-center text-gray-500 text-xs">
         <p className="mb-2 lg:mb-0">
           © 2025 Unique Euphoria. All rights reserved.

@@ -10,7 +10,7 @@ const TestimonialCard = () => {
       <section className="bg-white text-gray-900 py-16">
         <div className="flex flex-col md:flex-row items-center justify-center px-6 md:px-12 gap-8">
           
-          {/* Image Section */}
+       
           <div className="w-full md:w-1/2 flex justify-center">
             <img
               src={model4}
@@ -19,7 +19,7 @@ const TestimonialCard = () => {
             />
           </div>
 
-          {/* Text Section */}
+  
           <div className="w-full md:w-1/2">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-serif text-center md:text-left">
               Love And Care
