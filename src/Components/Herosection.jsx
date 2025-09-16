@@ -46,7 +46,7 @@ const Hero = () => {
 
   return (
     <section className="relative lg:py-16 px-4 sm:px-6 lg:px-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-2 gap-12 items-center ">
         <div className="space-y-6 text-left">
           <p className="text-xs sm:text-sm uppercase tracking-wide text-gray-700 font-medium">
             Luxurious, Confident, and Empowering

@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import model3 from "../../src/assets/Images/model3.jpg";
-import model6 from "../../src/assets/Images/model6.png"; 
-import model12 from "../../src/assets/Images/model12.png";
+
 
 const Testimonial = () => {
   const sliderRef = useRef(null); 
@@ -18,13 +17,13 @@ const Testimonial = () => {
       text: "I was hesitant to try a new stylist, but this website made it so easy to find the perfect match! The recommendations were spot-on, and I couldn't be happier with my haircut. The stylist understood exactly what I wanted and even suggested a few enhancements that made my hair look even better. I've received so many compliments—I'll definitely be back.",
     },
     {
-      img: model6,
+      img: model3,
       name: "Jessica K.",
       rating: 4,
       text: "Amazing experience! The stylist was professional and listened to my needs. My hair has never looked better.",
     },
     {
-      img: model12,
+      img: model3,
       name: "Olivia M.",
       rating: 5,
       text: "Highly recommend! The website made booking so simple, and the stylist's suggestions were perfect.",
@@ -42,7 +41,7 @@ const Testimonial = () => {
   }), []); 
 
   return (
-    <div className="bg-black text-white py-16 px-6 lg:px-20">
+    <div className="bg-black text-white py-16  px-4 md:px-12">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-semibold mb-2">Customer Testimonials</h2>
         <p className="text-gray-400">Real Stories from Happy Customers</p>

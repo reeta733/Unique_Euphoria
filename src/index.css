@@ -1,6 +1,6 @@
 @import "tailwindcss";
-/* @tailwind base; */
-/* @tailwind components; */
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 
@@ -50,19 +50,23 @@
   html,
   body,
   #root {
-    --color-from: #E0AC85;
+    --color-from: #e2c0a5;
     --color-to: #e4d2c4;
-    background: linear-gradient(135deg, var(--color-from), var(--color-to));
+    /* background: linear-gradient(135deg, top to bottom,
+  #f0dbcf ,  #f4e1d6,#f8eee9); */
 
     background: var(--color-bg);
     overflow-x: hidden;
-    /* overflow-y: hidden; */
-    /* overflow: hidden; */
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(100px);
   }
+  .hero-section {
+  background: linear-gradient(135deg, #f8eee9, #f4e1d6, #f0dbcf);
+}
+
 }
 
 
@@ -100,13 +104,4 @@
   .btn:focus-visible {
     outline: 4px auto
   }
-}
-
-
-
-
-img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
 }

@@ -11,6 +11,9 @@ import model15 from "../assets/Images/model15.png";
 import model16 from "../assets/Images/model16.png";
 import model17 from "../assets/Images/model17.png";
 import model18 from "../assets/Images/model18.png";
+import ConsultationSection from "../Components/ConsultationSection";
+import model23 from '../assets/Images/model23.png'
+import Testimonial from "../Components/Testimonial";
 
 const NextArrow = ({ onClick }) => (
   <button
@@ -127,6 +130,8 @@ const Collection = () => {
       </div>
 
       <Items title={<h1 className="text-4xl md:text-5xl font-serif font-bold text-[#333]">Best Seller</h1>} />
+      <Testimonial/>
+      <ConsultationSection image={model23}/>
     </>
   );
 };

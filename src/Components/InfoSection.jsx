@@ -2,7 +2,7 @@ import React from "react";
 
 const InfoSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-6 md:px-12 bg-white no-space ">
+    <div className="flex flex-col items-center justify-center px-6 md:px-12 bg-white">
       
       <div className="flex flex-col md:flex-row items-center justify-center px-8">
         <div className="w-full md:w-1/2 flex justify-center items-start pt-0">

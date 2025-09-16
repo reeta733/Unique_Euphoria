@@ -1,13 +1,28 @@
 import React from "react";
 import RealLife from "../Components/RealLife";
 import model4 from "../../src/assets/Images/model4.png";
+import model5 from "../../src/assets/Images/model5.png";
+import model6 from "../../src/assets/Images/model6.png";
 
 const TestimonialCard = () => {
-  return (
-    <div className="relative no-space">
-      <RealLife />
+    const testimonials = [
+    { img: model4 },
+    { img: model5 },
+    { img: model6 },
+  ];
 
-      <section className="bg-white text-gray-900 py-16">
+
+  return (
+      <div className="relative no-space">
+      <RealLife
+    
+        title="Real Life Results"
+        subtitle="See how our collection makes a difference"
+        testimonials={testimonials}
+      />
+
+
+      <section className="bg-white text-gray-900 ">
         <div className="flex flex-col md:flex-row items-center justify-center px-6 md:px-12 gap-8">
           
        
@@ -15,7 +30,7 @@ const TestimonialCard = () => {
             <img
               src={model4}
               alt="Hair Collection"
-              className="w-full max-w-sm md:max-w-md h-auto object-cover shadow-md rounded-lg"
+              className="w-full max-w-sm md:max-w-md h-auto object-cover shadow-md "
             />
           </div>
 

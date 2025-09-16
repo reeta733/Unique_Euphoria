@@ -3,16 +3,18 @@ import Icon from "../Components/Icon";
 
 import NavBar from "../Components/NavBar";
 import Testimonial from "../Components/Testimonial";
-import Appointment from "../Components/Appointment";
+
 
 import model13 from "../assets/Images/model13.png";
 import model14 from "../assets/Images/model14.png";
+import ConsultationSection from "../Components/ConsultationSection";
+import model24 from '../assets/Images/model24.png'
 
 const About = () => {
   return (
     <>
       <NavBar />
-      <section className=" container flex py-16 px-4 sm:px-6 lg:px-12">
+      <section className=" container flex  px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-2 gap-12 items-start">
           <div className="text-left space-y-6">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
@@ -134,7 +136,8 @@ const About = () => {
 
       <Icon />
       <Testimonial />
-      <Appointment />
+      
+      <ConsultationSection image={model24 }/>
     </>
   );
 };

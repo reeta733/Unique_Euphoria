@@ -50,8 +50,8 @@ const RealLife = ({ title, subtitle, testimonials }) => {
   );
 
   return (
-    <section className="py-16">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section >
+      <div className="max-w-7xl mx-auto  px-6 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold font-serif mb-3 text-black">
           {title}
         </h2>
